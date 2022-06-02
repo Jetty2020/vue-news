@@ -1,5 +1,5 @@
 <template>
-  Jobs
+  <div>Jobs</div>
 </template>
 
 <script>
