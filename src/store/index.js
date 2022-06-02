@@ -18,6 +18,11 @@ export const store = createStore({
       state.ask = ask;
     },
   },
+  getters: {
+    fetchedAsk(state) {
+      return state.ask;
+    },
+  },
   actions: {
     FETCH_NEWS({ commit }) {
       fetchNewsList()
