@@ -8,6 +8,7 @@ export const store = createStore({
     jobs: [],
     ask: [],
     user:{},
+    item:{},
   },
   mutations,
   getters: {

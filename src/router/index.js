@@ -18,7 +18,7 @@ const routes = [
     component: () => import('@/views/JobsView'),
   },
   {
-    path: '/item',
+    path: '/item/:id',
     component: () => import('@/views/ItemView'),
   },
   {
