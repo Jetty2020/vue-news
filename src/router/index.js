@@ -22,7 +22,7 @@ const routes = [
     component: () => import('@/views/ItemView'),
   },
   {
-    path: '/user',
+    path: '/user/:id',
     component: () => import('@/views/UserView'),
   },
 ];
