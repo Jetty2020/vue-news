@@ -1,6 +1,8 @@
 <template>
   <tool-bar></tool-bar>
-  <router-view />
+  <transition name="page">
+    <router-view />
+  </transition>
 </template>
 
 <script>
@@ -17,5 +19,14 @@ export default {
 body {
   padding: 0;
   margin: 0;
+}
+/* Router transition */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s ease;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
 }
 </style>
