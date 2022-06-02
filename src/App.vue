@@ -1,7 +1,21 @@
 <template>
+  <tool-bar></tool-bar>
   <router-view />
 </template>
 
-<script></script>
+<script>
+import ToolBar from './components/ToolBar.vue';
 
-<style></style>
+export default {
+  components: {
+    ToolBar,
+  },
+};
+</script>
+
+<style>
+body {
+  padding: 0;
+  margin: 0;
+}
+</style>
