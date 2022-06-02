@@ -7,13 +7,16 @@ export const store = createStore({
     news: [],
     jobs: [],
     ask: [],
-    user:{},
-    item:{},
+    user: {},
+    item: {},
   },
   mutations,
   getters: {
     fetchedAsk(state) {
       return state.ask;
+    },
+    fetchedItem(state) {
+      return state.item;
     },
   },
   actions,
