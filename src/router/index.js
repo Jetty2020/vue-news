@@ -7,14 +7,17 @@ const routes = [
   },
   {
     path: '/news',
+    name: 'news',
     component: () => import('@/views/NewsView'),
   },
   {
     path: '/ask',
+    name: 'ask',
     component: () => import('@/views/AskView'),
   },
   {
     path: '/jobs',
+    name: 'jobs',
     component: () => import('@/views/JobsView'),
   },
   {
