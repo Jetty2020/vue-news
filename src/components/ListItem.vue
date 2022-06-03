@@ -7,15 +7,25 @@
         </div>
         <div>
           <p class="news-title">
-            <a :href="item.url">
-              {{ item.title }}
-            </a>
+            <template v-if="item.domain">
+              <a :href="item.url">
+                {{ item.title }}
+              </a>
+            </template>
+            <template v-else>
+              <router-link :to="`/item/${item.id}`">
+                {{ item.title }}
+              </router-link>
+            </template>
           </p>
           <small class="link-text">
             {{ item.time_ago }} by
-            <router-link :to="`/user/${item.user}`">
+            <router-link v-if="item.user" :to="`/user/${item.user}`">
               {{ item.user }}
             </router-link>
+            <a :href="item.url" v-else>
+              {{ item.domain }}
+            </a>
           </small>
         </div>
       </li>
