@@ -12,7 +12,15 @@ export default {
     ListItem,
   },
   created() {
-    this.$store.dispatch('FETCH_ASK');
+    this.$store.dispatch('START_SPINNER');
+    this.$store
+      .dispatch('FETCH_ASK')
+      .then(() => {
+        this.$store.dispatch('END_SPINNER');
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   },
 };
 </script>

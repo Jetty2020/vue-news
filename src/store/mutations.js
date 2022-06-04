@@ -14,4 +14,7 @@ export default {
   SET_ITEM(state, item) {
     state.item = item;
   },
+  SET_LOADING_STATUS(state, status) {
+    state.loadingStatus = status;
+  },
 };

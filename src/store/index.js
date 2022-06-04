@@ -9,6 +9,7 @@ export const store = createStore({
     ask: [],
     user: {},
     item: {},
+    loadingStatus: false,
   },
   mutations,
   getters: {

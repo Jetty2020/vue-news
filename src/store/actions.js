@@ -11,6 +11,7 @@ export default {
     fetchNewsList()
       .then(({ data }) => {
         commit('SET_NEWS', data);
+        return data;
       })
       .catch((err) => {
         console.error(err);
@@ -51,5 +52,11 @@ export default {
       .catch((err) => {
         console.error(err);
       });
+  },
+  START_SPINNER({ commit }) {
+    commit('SET_LOADING_STATUS', true);
+  },
+  END_SPINNER({ commit }) {
+    commit('SET_LOADING_STATUS', false);
   },
 };

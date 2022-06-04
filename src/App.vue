@@ -3,15 +3,23 @@
   <transition name="page">
     <router-view />
   </transition>
+  <spinner-item :loading="loadingStatus"></spinner-item>
 </template>
 
 <script>
 import ToolBar from './components/ToolBar.vue';
+import SpinnerItem from './components/SpinnerItem.vue';
 
 export default {
   components: {
     ToolBar,
+    SpinnerItem,
   },
+  computed: {
+    loadingStatus() {
+      return this.$store.state.loadingStatus;
+    }
+  }
 };
 </script>
 
