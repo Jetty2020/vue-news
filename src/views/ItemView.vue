@@ -3,11 +3,11 @@
     <section>
       <user-profile>
         <template v-slot:username>
-          <div>
+          <router-link :to="`/user/${fetchedItem.user}`">
             {{ fetchedItem.user }}
-          </div>
+          </router-link>
         </template>
-        <template v-slot:time>{{ fetchedItem.time_ago }}</template>
+        <template v-slot:time>{{ 'Posted '+fetchedItem.time_ago }}</template>
       </user-profile>
     </section>
     <section>

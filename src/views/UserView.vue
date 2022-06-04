@@ -6,11 +6,13 @@
           {{ userInfo.id }}
         </div>
       </template>
-      <template v-slot:time>{{ userInfo.created }}</template>
+      <template v-slot:time>
+        <span> {{ 'Joined ' + userInfo.created }}, </span>
+      </template>
       <template v-slot:karma>
-        <div>
+        <span>
           {{ userInfo.karma }}
-        </div>
+        </span>
       </template>
     </user-profile>
   </div>
